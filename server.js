@@ -3,8 +3,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 
-const authRoutes = require('./routes/authRoutes') // ✅ Importa rotas de auth
-const jogoRoutes = require('./routes/jogoRoutes') // ✅ Importa rotas de jogos
+const authRoutes = require('./routes/authRoutes') 
+const jogoRoutes = require('./routes/jogoRoutes') 
 
 const app = express()
 app.use(cors())
@@ -17,10 +17,10 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('🟢 Conectado ao MongoDB Atlas'))
   .catch(err => console.error('🔴 Erro ao conectar ao MongoDB', err))
 
-// ✅ Rotas de autenticação (registro e login)
+
 app.use('/auth', authRoutes)
 
-// ✅ Rotas de jogos (algumas protegidas por token)
+
 app.use('/', jogoRoutes)
 
 app.listen(port, () => {
