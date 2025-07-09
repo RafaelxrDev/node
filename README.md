@@ -5,7 +5,7 @@ Permite o cadastro, listagem e gerenciamento de jogos, além de autenticação d
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Node.js
 - Express
